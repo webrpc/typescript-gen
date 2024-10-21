@@ -31,5 +31,10 @@ struct Page
 
 
 service ExampleService
+  # Ping to test healthiness of service
   - Ping() => ()
+  # Get user endpoint
+  #
+  # gives you basic info about user
+  @deprecated
   - GetUser(userID: uint64) => (code: uint32, user: User)
